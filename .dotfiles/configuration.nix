@@ -20,6 +20,7 @@
       ./system/wm/x11.nix
       ./system/hardware/opengl.nix
       ./system/app/sunshine.nix
+     # ./system/app/steam.nix
     ];
 
   # Bootloader.
@@ -46,11 +47,7 @@
   virtualisation.libvirtd.enable = true;
   programs.virt-manager.enable = true;
 
-  programs.nix-ld.enable = true;
-  programs.nix-ld.libraries = with pkgs; [
-    # Add any missing dynamic libraries for unpackaged programs
-    # here, NOT in environment.systemPackages
-  ];
+  programs.steam.enable = true;
 
  # Enable CUPS to print documents.
  # services.printing.enable = true;
