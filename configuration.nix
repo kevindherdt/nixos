@@ -9,10 +9,10 @@
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
       ./system/hardware/nvidia.nix
-      ./modules/docker.nix
-      ./modules/flatpak.nix
+    #  ./modules/docker.nix
+    #  ./modules/flatpak.nix
     #  ./system/wm/kde6.nix # needs unstable channel
-     ./system/wm/gnome.nix
+      ./system/wm/gnome.nix
     # ./system/wm/hyprland.nix
       ./system/wm/dbus.nix
       ./system/wm/fonts.nix
@@ -21,7 +21,6 @@
       ./system/hardware/opengl.nix
       ./system/app/sunshine.nix
       ./system/app/steam.nix
-     # ./system/app/protonup.nix
     ];
 
   # Bootloader.
@@ -63,7 +62,7 @@
     extraGroups = [ "networkmanager" "wheel" "docker" ];
     packages = with pkgs; [
       firefox
-      kate
+     # kate
       ];
   };
 

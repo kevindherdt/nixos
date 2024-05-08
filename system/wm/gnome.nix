@@ -10,8 +10,7 @@
  
   environment.systemPackages = [
   # the rest of my packages
-  pkgs.gnome.adwaita-icon-theme
-  pkgs.gnome3.gnome-tweaks
+    pkgs.gnome3.gnome-tweaks
 ];
 
 }
