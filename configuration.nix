@@ -21,7 +21,7 @@
       ./system/hardware/opengl.nix
       ./system/app/sunshine.nix
       ./system/app/steam.nix
-      ./modules/protonup.nix
+      ./system/app/protonup.nix
     ];
 
   # Bootloader.
