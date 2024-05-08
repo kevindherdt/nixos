@@ -18,7 +18,9 @@
   # The home.packages option allows you to install Nix packages into your
   # environment.
   home.packages = [
-    # # Adds the 'hello' command to your environment. It prints a friendly
+  pkgs.protonup # Add this for protonup
+    
+  # # Adds the 'hello' command to your environment. It prints a friendly
     # # "Hello, world!" when run.
     # pkgs.hello
 
@@ -69,6 +71,7 @@
   #
   home.sessionVariables = {
     # EDITOR = "emacs";
+    STEAM_EXTRA_COMPAT_TOOLS_PATHS = "\${HOME}/.steam/root/compatibilitytools.d";
   };
 
   programs.bash = {
