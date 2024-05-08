@@ -21,6 +21,7 @@
       ./system/hardware/opengl.nix
       ./system/app/sunshine.nix
       ./system/app/steam.nix
+      ./modules/protonup.nix
     ];
 
   # Bootloader.
@@ -77,6 +78,7 @@
   git
   ffmpeg
   vim
+ # protonup
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
