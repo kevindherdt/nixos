@@ -1,7 +1,12 @@
 { pkgs, ... }:
 
 {
-  hardware.opengl.driSupport32Bit = true;
   programs.steam.enable = true;
-  environment.systemPackages = [ pkgs.steam ];
+  programs.steam.gamescopeSession.enable = true;
+  environment.systemPackages = with pkgs; [
+    mangohud
+  ];
+
+  programs.gamemode.enable = true;
+
 }
