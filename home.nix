@@ -20,6 +20,10 @@
   home.packages = [
   pkgs.steam
   pkgs.lutris
+<<<<<<< HEAD:.dotfiles/home.nix
+  pkgs.heroic
+=======
+>>>>>>> 1b6b75514f23f9796576e2c07636c29991bf344f:home.nix
   
   # # Adds the 'hello' command to your environment. It prints a friendly
     # # "Hello, world!" when run.
