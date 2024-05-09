@@ -18,7 +18,10 @@
   # The home.packages option allows you to install Nix packages into your
   # environment.
   home.packages = [
-    # # Adds the 'hello' command to your environment. It prints a friendly
+  pkgs.steam
+  pkgs.lutris
+  
+  # # Adds the 'hello' command to your environment. It prints a friendly
     # # "Hello, world!" when run.
     # pkgs.hello
 
@@ -87,6 +90,8 @@
     };
   };
 
+  # Enable unfree packages
+  nixpkgs.config.allowUnfree = true;
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
