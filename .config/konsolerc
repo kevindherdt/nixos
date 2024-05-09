@@ -1,0 +1,19 @@
+[General]
+ConfigVersion=1
+
+[MainWindow]
+1024x768 screen: Height=509
+1024x768 screen: Width=904
+1024x768 screen: XPosition=59
+1024x768 screen: YPosition=130
+4 screens: Height=509
+4 screens: Width=904
+4 screens: Window-Maximized=true
+4 screens: XPosition=375
+4 screens: YPosition=171
+DP-1 DP-2 HDMI-1 None-1=DP-1
+None-1=None-1
+ToolBarsMovable=Disabled
+
+[UiSettings]
+ColorScheme=

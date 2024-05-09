@@ -1,0 +1,11 @@
+[LegacySession: saved at previous logout]
+count=0
+
+[Session: saved at previous logout]
+clientId1=10e169786f000171519130700000021310004
+count=1
+discardCommand1[$e]=rm,$HOME/.config/session/dolphin_10e169786f000171519130700000021310004_1715199051_866823
+program1=/run/current-system/sw/bin/dolphin
+restartCommand1=/run/current-system/sw/bin/dolphin,-session,10e169786f000171519130700000021310004_1715199051_866823,-name,dolphin
+restartStyleHint1=0
+userId1=kevin
