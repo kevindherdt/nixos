@@ -20,7 +20,6 @@
       ./system/wm/x11.nix
       ./system/hardware/opengl.nix
       ./system/app/sunshine.nix
-    #  ./system/app/steam.nix
     ];
 
   # Bootloader.
@@ -47,7 +46,6 @@
   virtualisation.libvirtd.enable = true;
   programs.virt-manager.enable = true;
 
- # programs.steam.enable = true;
 
  # Enable CUPS to print documents.
  # services.printing.enable = true;
@@ -62,7 +60,7 @@
     extraGroups = [ "networkmanager" "wheel" "docker" ];
     packages = with pkgs; [
       firefox
-      kate
+     # kate
       ];
   };
 
