@@ -13,14 +13,14 @@
       ./modules/flatpak.nix
       ./system/wm/kde6.nix # needs unstable channel
     # ./system/wm/gnome.nix
-    # ./system/wm/hyprland.nix
-      ./system/wm/dbus.nix
-      ./system/wm/fonts.nix
-      ./system/wm/pipewire.nix
+     ./system/wm/hyprland.nix
+    #  ./system/wm/dbus.nix
+    #  ./system/wm/fonts.nix
+    #  ./system/wm/pipewire.nix
       ./system/wm/x11.nix
       ./system/hardware/opengl.nix
       ./system/app/sunshine.nix
-      ./system/app/steam.nix
+    #  ./system/app/steam.nix
     ];
 
   # Bootloader.
