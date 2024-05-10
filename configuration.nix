@@ -19,7 +19,7 @@
     #  ./system/wm/pipewire.nix
       ./system/wm/x11.nix
       ./system/hardware/opengl.nix
-      ./system/app/sunshine.nix
+    #  ./system/app/sunshine.nix
     ];
 
   # Bootloader.
