@@ -81,6 +81,13 @@
   };
 
 
+
+  virtualisation.docker = {
+    enable = true;
+    setSocketVariable = true;
+    rootless = true;
+  };
+
   programs.bash = {
     enable = true;
     shellAliases = {

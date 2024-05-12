@@ -9,7 +9,7 @@
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
       ./system/hardware/nvidia.nix
-      ./modules/docker.nix
+    #  ./modules/docker.nix
       ./modules/flatpak.nix
       ./system/wm/kde6.nix # needs unstable channel
     # ./system/wm/gnome.nix
@@ -19,7 +19,6 @@
     #  ./system/wm/pipewire.nix
       ./system/wm/x11.nix
       ./system/hardware/opengl.nix
-    #  ./system/app/sunshine.nix
     ];
 
   # Bootloader.
@@ -42,7 +41,7 @@
   # Select internationalisation properties.
   i18n.defaultLocale = "en_US.UTF-8";
 
-  # Virtual Machine
+ # Virtual Machine
  # virtualisation.libvirtd.enable = true;
  # programs.virt-manager.enable = true;
 
