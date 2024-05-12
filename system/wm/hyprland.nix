@@ -131,5 +131,6 @@
     pam.services.swaylock.text = "auth include login";
     polkit.enable = true;
     rtkit.enable = true;
+    pam.services.sddm.enableGnomeKeyring = true; # Configure PAM to use GNOME Keyring for LightDM
   };
 }
