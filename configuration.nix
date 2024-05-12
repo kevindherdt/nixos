@@ -19,7 +19,8 @@
     #  ./system/wm/pipewire.nix
       ./system/wm/x11.nix
       ./system/hardware/opengl.nix
-      ./devices/kevin-desktop.nix
+      ./devices/kevin-desktop.nix # Gaming pc
+    #  ./devices/kevin-asus.nix #Asus zenbook notebook
     ];
 
   # Bootloader.
