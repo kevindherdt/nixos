@@ -24,6 +24,8 @@
   pkgs.sunshine  
   pkgs.ffmpeg
   pkgs.vim
+  pkgs.firefox
+
 
   # # Adds the 'hello' command to your environment. It prints a friendly
     # # "Hello, world!" when run.
@@ -78,10 +80,6 @@
     # EDITOR = "emacs";
   };
 
-
-  # Virtual Manager
-  programs.libvirtd.enable = true;
-  virtualisation.libvirtd.enable = true;
 
   programs.bash = {
     enable = true;

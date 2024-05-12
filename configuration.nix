@@ -43,8 +43,8 @@
   i18n.defaultLocale = "en_US.UTF-8";
 
   # Virtual Machine
-  virtualisation.libvirtd.enable = true;
-  programs.virt-manager.enable = true;
+ # virtualisation.libvirtd.enable = true;
+ # programs.virt-manager.enable = true;
 
 
  # Enable CUPS to print documents.
@@ -59,7 +59,7 @@
     description = "Kevin";
     extraGroups = [ "networkmanager" "wheel" "docker" ];
     packages = with pkgs; [
-      firefox
+     # firefox
      # kate
       ];
   };
@@ -73,8 +73,6 @@
   # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
   wget
   git
-  ffmpeg
-  vim
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
