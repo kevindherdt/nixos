@@ -21,7 +21,9 @@
   pkgs.steam
   pkgs.lutris
   pkgs.heroic
- # pkgs.sunshine  
+  pkgs.sunshine  
+  pkgs.ffmpeg
+  pkgs.vim
 
   # # Adds the 'hello' command to your environment. It prints a friendly
     # # "Hello, world!" when run.
@@ -75,6 +77,11 @@
   home.sessionVariables = {
     # EDITOR = "emacs";
   };
+
+
+  # Virtual Manager
+  programs.libvirtd.enable = true;
+  virtualisation.libvirtd.enable = true;
 
   programs.bash = {
     enable = true;
