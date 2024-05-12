@@ -9,7 +9,7 @@
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
       ./system/hardware/nvidia.nix
-    #  ./modules/docker.nix
+      ./modules/docker.nix
       ./modules/flatpak.nix
       ./system/wm/kde6.nix # needs unstable channel
     # ./system/wm/gnome.nix
