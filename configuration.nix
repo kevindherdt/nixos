@@ -47,7 +47,7 @@
  # virtualisation.libvirtd.enable = true;
  # programs.virt-manager.enable = true;
 
-  fileSystems."/data" = {
+  fileSystems."/datalinux" = {
     device = "/dev/disk/by-uuid/fc337e71-6213-429d-aeb7-38ff3dc35aa6";
     fsType = "ext4";
     options = [ "nofail" ];
