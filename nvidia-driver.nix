@@ -10,7 +10,7 @@ hardware.nvidia.package = config.boot.kernelPackages.nvidiaPackages.mkDriver {
   persistencedSha256 = lib.fakeSha256;
   };
 
-  services.xserver.videoDrivers = ["nvidia"];
+#  services.xserver.videoDrivers = ["nvidia"];
 
   hardware.nvidia = {
     modesetting.enable = true;
