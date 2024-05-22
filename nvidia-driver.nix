@@ -17,5 +17,6 @@ hardware.nvidia.package = config.boot.kernelPackages.nvidiaPackages.mkDriver {
     powerManagement.enable = true;
     powerManagement.finegrained = false;
     nvidiaSettings = true;
+    open= false;
    };
 }
