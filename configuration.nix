@@ -2,13 +2,13 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, ... }:
+{ config, pkgs, lib, ... }:
 
 {
   imports =
     [ # Include the results of the hardware scan.
       #./hardware-configuration.nix
-      ./system/hardware/nvidia.nix
+    #  ./system/hardware/nvidia.nix
       ./modules/docker.nix
       ./modules/flatpak.nix
       ./system/wm/kde6.nix # needs unstable channel
@@ -21,6 +21,7 @@
       ./system/hardware/opengl.nix
       ./devices/kevin-desktop.nix # Gaming pc
     #  ./devices/kevin-asus.nix #Asus zenbook notebook
+      ./nvidia-driver.nix
     ];
 
   # Bootloader.
