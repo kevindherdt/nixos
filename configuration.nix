@@ -8,8 +8,8 @@
   imports =
     [ # Include the results of the hardware scan.
       #./hardware-configuration.nix
-    #  ./system/hardware/nvidia.nix
-      ./modules/docker.nix
+      ./system/hardware/nvidia.nix
+    #  ./modules/docker.nix
       ./modules/flatpak.nix
       ./system/wm/kde6.nix # needs unstable channel
     # ./system/wm/gnome.nix
@@ -21,7 +21,6 @@
       ./system/hardware/opengl.nix
       ./devices/kevin-desktop.nix # Gaming pc
     #  ./devices/kevin-asus.nix #Asus zenbook notebook
-      ./nvidia-driver.nix
     ];
 
   # Bootloader.
@@ -80,6 +79,7 @@
   # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
   wget
   git
+  pciutils
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
@@ -110,5 +110,4 @@
   system.stateVersion = "23.11"; # Did you read the comment?
   
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
-
 }
