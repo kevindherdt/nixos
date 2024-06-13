@@ -7,7 +7,7 @@
 {
   imports =
     [ # Include the results of the hardware scan.
-      #./hardware-configuration.nix
+      ./hardware-configuration.nix
       ./system/hardware/nvidia.nix
     #  ./modules/docker.nix
       ./modules/flatpak.nix
@@ -19,7 +19,7 @@
     #  ./system/wm/pipewire.nix
       ./system/wm/x11.nix
       ./system/hardware/opengl.nix
-      ./devices/kevin-desktop.nix # Gaming pc
+    #  ./devices/kevin-desktop.nix # Gaming pc
     #  ./devices/kevin-asus.nix #Asus zenbook notebook
     ];
 
