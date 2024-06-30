@@ -1,37 +1,31 @@
 { config, pkgs, ... }:
 
 {
-  # List packages installed in system profile
+  # Specify system packages needed by Hyprland and other applications
   environment.systemPackages = with pkgs; [
     # System Packages
-    pkgs.python312Packages.pyquery
-    duf
     baobab
     btrfs-progs
     cpufrequtils
+    duf
     ffmpeg   
-    glib #for gsettings to work   
+    glib
     hwdata
     hyfetch
-    inxi
+    inxi  
     libappindicator
     libnotify
-    openssl #required by Rainbow borders
-    python3 
+    openssl
     vim
     wget
     xdg-user-dirs
 
-    # I normally have and use
+    # Additional packages specific to Hyprland or user's setup
     audacious
-    mpv
     fastfetch
+    (mpv.override { scripts = [ mpvScripts.mpris ]; }) # assuming you have mpvScripts defined
     ranger
-    shotcut
-	    
-    # Hyprland Stuff        
-	    ags 
-    wallust
+    ags
     btop
     cava
     cliphist
@@ -39,51 +33,49 @@
     gnome.gnome-system-monitor
     gnome.file-roller
     grim
-    gtk-engine-murrine #for gtk themes
-    hyprcursor # requires unstable channel
-    hypridle # requires unstable channel
-    hyprlock  # requires unstable channel
+    gtk-engine-murrine
+    hyprcursor
+    hypridle
     imagemagick
     jq
     kitty
-    mpvScripts.mpris
+    libsForQt5.qtstyleplugin-kvantum
     networkmanagerapplet
-    nwg-look # requires unstable channel
+    nwg-look
     nvtopPackages.full
     pamixer
-    playerctl
     pavucontrol
+    playerctl
     polkit_gnome
-    pywal
+    pyprland
+    qt5ct
+    qt6ct
     qt6.qtwayland
-    qt6Packages.qtstyleplugin-kvantum #kvantum
-    libsForQt5.qtstyleplugin-kvantum #kvantum
+    qt6Packages.qtstyleplugin-kvantum
+    rofi-wayland
     slurp
     swappy
     swaynotificationcenter
     swww
     unzip
-    qt5ct
-    qt6ct
-    rofi-wayland
     wl-clipboard
     wlogout
     yad
+    wallust
   ];
 
+  # Configure specific programs and services related to Hyprland
+  programs.hyprland = {
+    enable = true;
+    package = pkgs.hyprland;  # Adjust if hyprland is provided differently
+    portalPackage = pkgs.xdg-desktop-portal-hyprland;
+    xwayland.enable = true;
+  };
+
+  # Other program configurations
   programs = {
-    # Enable Hyprland environment
-    hyprland = {
-      enable = true;
-      xwayland.enable = true;
-    };
-
-    # Enable Waybar conditionally based on the Hyprland environment
-    waybar = {
-      enable = config.programs.hyprland.enable;
-    };
-
-    # Enable other programs as needed
+    xwayland.enable = true;
+    hyprlock.enable = true;
     firefox.enable = true;
     git.enable = true;
     thunar.enable = true;
@@ -95,18 +87,14 @@
       tumbler
     ];
     dconf.enable = true;
+    waybar.enable = true;
   };
 
-  # Enable XDG portal and specify extra portals
-  xdg.portal.enable = true;
-  xdg.portal.extraPortals = with pkgs; [
-    xdg-desktop-portal-gtk
-    xdg-desktop-portal-hyprland
-  ];
-  
+  # Services configuration
   services = {
     gvfs.enable = true;
     tumbler.enable = true;
+
     pipewire = {
       enable = true;
       alsa.enable = true;
@@ -114,18 +102,22 @@
       pulse.enable = true;
       wireplumber.enable = true;
     };
+
     udev.enable = true;
     envfs.enable = true;
     dbus.enable = true;
+
     fstrim = {
       enable = true;
       interval = "weekly";
     };
+
     fwupd.enable = true;
-    upower.enable = true;  
+
+    upower.enable = true;
   };
 
-  # FONTS
+  # Fonts configuration
   fonts.packages = with pkgs; [
     noto-fonts
     fira-code
@@ -133,13 +125,25 @@
     jetbrains-mono
     font-awesome
     terminus_font
-    (nerdfonts.override {fonts = ["JetBrainsMono"];})
+    (nerdfonts.override { fonts = ["JetBrainsMono"]; })
   ];
 
+  # Security settings
   security = {
     pam.services.swaylock.text = "auth include login";
     polkit.enable = true;
     rtkit.enable = true;
-    pam.services.sddm.enableGnomeKeyring = true; # Configure PAM to use GNOME Keyring for LightDM
   };
+
+  # Systemd services
+  systemd.services = {
+    NetworkManager-wait-online.enable = false;
+    firewalld.enable = false;  # Exclude firewall configuration
+    power-profiles-daemon = {
+      enable = true;
+      wantedBy = [ "multi-user.target" ];
+    };
+  };
+
+  # Additional configurations as needed
 }

@@ -2,10 +2,9 @@
 { pkgs, ... }:
 
 {
-  # Enable Opengl
-  hardware.opengl = {
-    enable = true;
-    driSupport = true;
-    driSupport32Bit = true;
+  # Enable OpenGL
+  hardware.graphics = {
+    enable = true;  # Adjusted from hardware.opengl.enable
+    enable32Bit = true;  # Adjusted from hardware.opengl.driSupport32Bit
   };
 }
