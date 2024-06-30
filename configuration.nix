@@ -68,6 +68,7 @@
   wget
   git
   pciutils
+  pkgs.distrobox
   ];
 
 services = {
