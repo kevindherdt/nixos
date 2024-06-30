@@ -70,6 +70,15 @@
   pciutils
   ];
 
+services = {
+    syncthing = {
+        enable = true;
+        user = "kevin";
+        dataDir = "/home/kevin/Documents";    # Default folder for new synced folders
+        configDir = "/home/kevin/Documents/.config/syncthing";   # Folder for Syncthing's settings and keys
+    };
+};
+
   # Enable the OpenSSH daemon.
   services.openssh.enable = true;
 
