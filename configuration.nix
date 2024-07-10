@@ -72,6 +72,7 @@
   pciutils
   pkgs.distrobox
   pkgs.boxbuddy
+  syncthing
   ];
 
 services = {
