@@ -71,6 +71,7 @@
   git
   pciutils
   pkgs.distrobox
+  pkgs.boxbuddy
   ];
 
 services = {
