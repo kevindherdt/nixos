@@ -23,6 +23,7 @@
       ./system/hardware/opengl.nix
     #  ./devices/kevin-desktop.nix # Gaming pc
     #  ./devices/kevin-asus.nix #Asus zenbook notebook
+       ./podman.nix
     #   ./home.nix
     ];
 
@@ -54,6 +55,7 @@
     description = "Kevin";
     extraGroups = [ "networkmanager" "wheel" "docker" ];
     packages = with pkgs; [
+    brave
       ];
   };
 
