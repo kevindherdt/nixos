@@ -14,6 +14,16 @@
     };
   };
 
+  # Enable NVIDIA container toolkit
+  hardware = {
+    nvidia = {
+      container = {
+        enable = true;
+        toolkit = true;
+      };
+    };
+  };
+
   # Useful other development tools
   environment.systemPackages = with pkgs; [
     dive # look into docker image layers
