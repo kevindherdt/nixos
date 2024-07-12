@@ -26,7 +26,9 @@
 #  pkgs.vim
   pkgs.firefox
   pkgs.obsidian 
-
+  pkgs.protonup-qt
+  pkgs.mangohud
+  pkgs.gamemode
   # # Adds the 'hello' command to your environment. It prints a friendly
     # # "Hello, world!" when run.
     # pkgs.hello

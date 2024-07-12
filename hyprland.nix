@@ -29,9 +29,9 @@
     btop
     cava
     cliphist
-    gnome.eog
-    gnome.gnome-system-monitor
-    gnome.file-roller
+    eog
+    gnome-system-monitor
+    file-roller
     grim
     gtk-engine-murrine
     hyprcursor
