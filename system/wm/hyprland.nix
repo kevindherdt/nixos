@@ -28,9 +28,9 @@
     btop
     cava
     cliphist
-    gnome.eog
-    gnome.gnome-system-monitor
-    gnome.file-roller
+    pkgs.eog
+    pkgs.gnome-system-monitor
+    pkgs.file-roller
     grim
     gtk-engine-murrine #for gtk themes
     hyprcursor # requires unstable channel
