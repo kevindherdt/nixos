@@ -86,8 +86,7 @@ services = {
 };
 
 
-  hardware.nvidia-container-toolkit.enable = true;	
-
+  hardware.nvidia-container-toolkit.enable = true;
 
 
   # Enable the OpenSSH daemon.
