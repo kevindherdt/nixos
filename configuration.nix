@@ -73,6 +73,7 @@
   pkgs.distrobox
   pkgs.boxbuddy
   syncthing
+  nvidia-container-toolkit
   ];
 
 services = {
@@ -83,6 +84,11 @@ services = {
         configDir = "/home/kevin/Documents/.config/syncthing";   # Folder for Syncthing's settings and keys
     };
 };
+
+
+  hardware.nvidia-container-toolkit.enable = true;	
+
+
 
   # Enable the OpenSSH daemon.
   services.openssh.enable = true;
