@@ -13,8 +13,8 @@
       ./system/hardware/nvidia.nix
     #  ./modules/docker.nix
       ./modules/flatpak.nix
-    #  ./system/wm/kde6.nix # needs unstable channel
-      ./system/wm/gnome.nix
+      ./system/wm/kde6.nix # needs unstable channel
+    #  ./system/wm/gnome.nix
     #  ./hyprland.nix
       ./system/wm/dbus.nix
     #  ./system/wm/fonts.nix
