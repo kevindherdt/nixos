@@ -21,7 +21,7 @@
   pkgs.steam
   pkgs.lutris
   pkgs.heroic
-#  pkgs.sunshine  
+  pkgs.sunshine  
   pkgs.ffmpeg
 #  pkgs.vim
   pkgs.firefox
