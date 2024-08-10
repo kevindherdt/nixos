@@ -87,6 +87,7 @@ services = {
 
 # For a newer kernel
   boot.kernelPackages = pkgs.linuxPackages_cachyos;
+  chaotic.scx.enable = true; # This enables the SCX (sched-ext) with the rustland scheduler
 
   hardware.nvidia-container-toolkit.enable = true;
 
