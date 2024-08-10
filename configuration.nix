@@ -86,7 +86,7 @@ services = {
 };
 
 # For a newer kernel
-  boot.kernelPackages = pkgs.linuxPackages_latest;
+  boot.kernelPackages = pkgs.linuxPackages_cachyos;
 
   hardware.nvidia-container-toolkit.enable = true;
 
